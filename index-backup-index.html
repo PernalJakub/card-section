@@ -557,6 +557,12 @@
       /* background-size: cover; */
       /* background-position: center; */
     }
+
+    .no-hover .card-media:hover {
+      background-color: inherit !important;
+      background-image: none !important;
+      transform: none !important;
+    }
   
   </style>
 </head>
@@ -696,6 +702,17 @@
       const container = document.querySelector(".card-container");
       const maxIndex = cards.length - 3;
       let currentIndex = 0;
+
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+      if (isTouchDevice) {
+        document.querySelectorAll('.cs-arrow').forEach(arrow => {
+          arrow.style.display = 'none';
+        });
+        document.querySelectorAll('.card').forEach(card => {
+          card.classList.add('no-hover');
+        });
+      }
 
       const getScrollAmount = () => {
         const card = track.querySelector(".card");
