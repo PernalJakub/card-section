@@ -146,6 +146,8 @@
       --font-display: "SF Pro Display", sans-serif;
       --font-rest: "SF Pro Rounded", sans-serif;
 
+      /* Additional elements for card-section in root */
+
       --label-large: 14px;
       --card-width: 342x;
       --card-height: 459px;
@@ -171,6 +173,10 @@
       background-position: center;
       box-shadow: inset 0 -5px 10px 1px rgba(0, 0, 0, 0.25);
     }
+
+    /* Additional elements for card-section in root */
+
+
     @media (max-width: 991px) {
       :root {
         --display-large: var(--display-large-t);
@@ -236,7 +242,9 @@
       margin: 0;
       padding: 0;
     }
- 
+
+    /* CSS card-section */
+
     .card-section {
       width: 100%;
       display: flex;
@@ -548,6 +556,7 @@
     }
     }
     
+    /* CSS card-section */
   
   </style>
 </head>
@@ -679,6 +688,9 @@
   </section>
 
   <script>
+
+    // JS card-section
+
     document.addEventListener("DOMContentLoaded", () => {
       const root = document.querySelector(".card-section");
       const track = root.querySelector(".card-track");
@@ -786,6 +798,10 @@
         });
       });
     });
+
+    // JS card-section
+
+    
     </script>
 </body>
 </html>
