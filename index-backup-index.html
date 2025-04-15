@@ -246,7 +246,7 @@
       padding: 2rem 0;
     }
 
-    .card-container-label {
+    .card-section .card-container-label {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -256,48 +256,48 @@
       padding-right: 20px;
     }
 
-    .container-label h3 {
+    .card-section .container-label h3 {
       font-size: var(--headline-medium);
       line-height: var(--line-height-headline-medium);
       margin-bottom: var(--space-sm);
     }
 
     @media (max-width: 991px) {
-      .container-label h3 {
+      .card-section .container-label h3 {
         margin-bottom: var(--space-xs);
       }
     }
 
     @media (max-width: 599px) {
-      .container-label h3 {
+      .card-section .container-label h3 {
         margin-bottom: var(--space-2xs);
       }
     }
 
-    .container-label p {
+    .card-section .container-label p {
       font-size: var(--body-large);
       line-height: var(--line-height-body-large);
       margin-bottom: var(--space-2xs);
     }
 
     @media (max-width: 991px) {
-      .container-label p {
+      .card-section .container-label p {
         margin-bottom: var(--space-3xs);
       }
     }
 
     @media (max-width: 599px) {
-      .container-label p {
+      .card-section .container-label p {
         margin-bottom: var(--space-4xs);
       }
     }
 
-    .container-arrows {
+    .card-section .container-arrows {
       display: flex;
       align-items: center;
     }
 
-    .cs-arrow {
+    .card-section .cs-arrow {
       width: 32px;
       height: 26px;
       font-size: 2rem;
@@ -311,33 +311,33 @@
     }
 
     @media (max-width: 991px) {
-      .cs-arrow {
+      .card-section .cs-arrow {
         opacity: 0;
         pointer-events: none;
         visibility: hidden;
         transition: opacity 0.3s ease, visibility 0.3s ease;
       }
 
-      .card-section:hover .cs-arrow {
+      .card-section .card-section:hover .cs-arrow {
         opacity: 1;
         pointer-events: auto;
         visibility: visible;
       }
     }
 
-    .cs-arrow:hover {
+    .card-section .cs-arrow:hover {
       color: white;
     }
 
-    .cs-arrow .left {
+    .card-section .cs-arrow .left {
       text-align: center;
     }
 
-    .cs-arrow .left {
+    .card-section .cs-arrow .left {
       text-align: center;
     }
 
-    .card-container {
+    .card-section .card-container {
       width: 100%;
       max-width: var(--container-max-width);
       position: relative;
@@ -347,7 +347,7 @@
       padding-left: 12px;
     }
 
-    .card-track {
+    .card-section .card-track {
       display: flex;
       gap: var(--card-gap);
       align-items: flex-start;
@@ -363,7 +363,7 @@
     }
     
 
-    .card {
+    .card-section .card {
       width: var(--card-width);
       height: var(--card-height);
       display: flex;
@@ -374,12 +374,12 @@
       flex-shrink: 0;
     }
 
-    .card-label {
+    .card-section .card-label {
       font-size: var(--label-large);
       color: var(--neutral-black);
     }
 
-    .card-inner {
+    .card-section .card-inner {
       width: var(--inner-card-width);
       height: var(--inner-card-height);
       background-color: var(--tertiary-light);
@@ -394,18 +394,18 @@
 
     @media (min-width: 992px) {
       
-      .card-track {
+      .card-section .card-track {
         overflow-x: visible;
         scroll-snap-type: x mandatory;
       }
     }
 
-.card.expanded .card-top {
+.card-section .card.expanded .card-top {
   height: 74%;
   transition: height 0.6s ease;
 }
 
-.card.expanded .card-bottom {
+.card-section .card.expanded .card-bottom {
   height: 26%;
   flex-direction: column;
   align-items: flex-start;
@@ -413,13 +413,13 @@
   padding: 10px 26px;
 }
 
-.card-bottom {
+.card-section .card-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.card-bottom-extra {
+.card-section .card-bottom-extra {
   opacity: 0;
   transform: translateY(10px);
   width: 100%;
@@ -429,26 +429,26 @@
   margin-top: 8px;
 }
 
-.card.expanded .card-bottom-extra {
+.card-section .card.expanded .card-bottom-extra {
   opacity: 1;
   transform: translateY(0);
 }
 
-.card-button.alt {
+.card-section .card-button.alt {
   background-color: var(--neutral-white);
   color: black;
 }
 
-    .card-track::-webkit-scrollbar {
+    .card-section .card-track::-webkit-scrollbar {
       display: none;
     }
 
-    .card-track {
+    .card-section .card-track {
     -ms-overflow-style: none; /* IE/Edge */
     scrollbar-width: none; /* Firefox */
   }
   @media (min-width: 992px) {
-  .card-track {
+  .card-section .card-track {
     scroll-snap-type: none;
     overflow-x: visible;
     transition: transform 0.5s ease;
@@ -467,40 +467,40 @@
   }
 }
 
-.fade-in-item {
+.card-section .fade-in-item {
   opacity: 0;
   animation: fadeSlideIn 1.2s ease forwards;
   animation-play-state: paused;
 }
 
-.delay-0 { animation-delay: 0s; }
-.delay-1 { animation-delay: 0.15s; }
-.delay-2 { animation-delay: 0.30s; }
-.delay-3 { animation-delay: 0.45s; }
-.delay-4 { animation-delay: 0.60s; }
-    .delay-5 { animation-delay: 0.75s; }
+.card-section .delay-0 { animation-delay: 0s; }
+.card-section .delay-1 { animation-delay: 0.15s; }
+.card-section .delay-2 { animation-delay: 0.30s; }
+.card-section .delay-3 { animation-delay: 0.45s; }
+.card-section .delay-4 { animation-delay: 0.60s; }
+.card-section .delay-5 { animation-delay: 0.75s; }
 
-    .card-top {
+.card-section .card-top {
       height: 83%;
       padding: 10px 10px 0 10px;
       transition: height 0.7s ease;
-    }
+}
 
-    .card-bottom {
+.card-section .card-bottom {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       padding: 5.7% 26px;
       height: 17%;
-    }
+}
 
-    .card-title {
+.card-section .card-title {
       font-size: var(--title-medium);
       font-family: var(--font-rest);
-    }
+}
 
-    .card-button {
+.card-section .card-button {
       font-size: var(--label-large);
       padding: 10px 18px;
       background-color: var(--neutral-white);
@@ -508,38 +508,38 @@
       border: none;
       border-radius: 24px;
       cursor: pointer;
-    }
+}
 
-    .card-button:hover {
+.card-section .card-button:hover {
       background-color: var(--neutral-very-light);
-    }
+}
 
-    .card-bottom-row {
+.card-section .card-bottom-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
     }
 
-    .card-extra-row {
+    .card-section .card-extra-row {
       opacity: 0;
       transform: translateY(15px);
       transition: opacity 0.7s ease;
       pointer-events: none;
     }
 
-    .card.expanded .card-bottom {
+    .card-section .card.expanded .card-bottom {
       height: 26%;
       padding: 4% 26px;
     }
 
-    .card.expanded .card-extra-row {
+    .card-section .card.expanded .card-extra-row {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
     }
 
-    .card-media {
+    .card-section .card-media {
       width: 100%;
       height: 100%;
       border: 1px solid white;
@@ -547,18 +547,18 @@
       border-radius: var(--card-radius);
     }
     
-    .card-media {
+    .card-section .card-media {
       transition: background-image 0.6s ease, transform 0.6s ease, background-color 0.6s ease;
     }
     
-    .card:hover .card-media {
+    .card-section .card:hover .card-media {
       background-color: #a9a9a9; /* Darker gray on hover */
       /* background-image: url('https://source.unsplash.com/400x400/?barber,style'); */
       /* background-size: cover; */
       /* background-position: center; */
     }
 
-    .no-hover .card-media:hover {
+    .card-section .no-hover .card-media:hover {
       background-color: inherit !important;
       background-image: none !important;
       transform: none !important;
@@ -695,39 +695,40 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const track = document.querySelector(".card-track");
-      const leftArrow = document.querySelector(".cs-arrow.left");
-      const rightArrow = document.querySelector(".cs-arrow.right");
+      const root = document.querySelector(".card-section");
+      const track = root.querySelector(".card-track");
+      const leftArrow = root.querySelector(".cs-arrow.left");
+      const rightArrow = root.querySelector(".cs-arrow.right");
       const cards = track.querySelectorAll(".card");
-      const container = document.querySelector(".card-container");
+      const container = root.querySelector(".card-container");
       const maxIndex = cards.length - 3;
       let currentIndex = 0;
-
+    
       const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
+    
       if (isTouchDevice) {
-        document.querySelectorAll('.cs-arrow').forEach(arrow => {
+        root.querySelectorAll('.cs-arrow').forEach(arrow => {
           arrow.style.display = 'none';
         });
-        document.querySelectorAll('.card').forEach(card => {
+        root.querySelectorAll('.card').forEach(card => {
           card.classList.add('no-hover');
         });
       }
-
+    
       const getScrollAmount = () => {
         const card = track.querySelector(".card");
         const gap = parseInt(window.getComputedStyle(track).gap) || 0;
         return card.offsetWidth + gap;
       };
-
+    
       const isDesktop = () => window.innerWidth >= 992;
-
+    
       const centerCard = (index) => {
-      const card = cards[index];
-      const offset = card.offsetLeft;
-      track.style.transform = `translateX(-${offset}px)`;
+        const card = cards[index];
+        const offset = card.offsetLeft;
+        track.style.transform = `translateX(-${offset}px)`;
       };
-
+    
       leftArrow.addEventListener("click", () => {
         if (isDesktop()) {
           if (currentIndex > 0) currentIndex--;
@@ -736,7 +737,7 @@
           track.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
         }
       });
-
+    
       rightArrow.addEventListener("click", () => {
         if (isDesktop()) {
           if (currentIndex < maxIndex) currentIndex++;
@@ -745,12 +746,11 @@
           track.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
         }
       });
-
+    
       if (isDesktop()) {
         centerCard(currentIndex);
       }
-      
-      // Recenter on resize to avoid layout issues
+    
       let resizeTimer;
       window.addEventListener("resize", () => {
         clearTimeout(resizeTimer);
@@ -761,18 +761,18 @@
           }
         }, 300);
       });
-      
+    
       setTimeout(() => {
-        document.querySelectorAll('.fade-in-item').forEach(el => {
-        el.style.animationPlayState = 'running';
+        root.querySelectorAll('.fade-in-item').forEach(el => {
+          el.style.animationPlayState = 'running';
         });
       }, 200);
-
-      document.querySelectorAll('.card-button').forEach(button => {
+    
+      root.querySelectorAll('.card-button').forEach(button => {
         button.addEventListener('click', (e) => {
           const card = e.target.closest('.card');
           if (!card) return;
-
+    
           card.classList.toggle('expanded');
           const media = card.querySelector('.card-media');
           if (card.classList.contains('expanded')) {
@@ -785,7 +785,7 @@
             media.style.backgroundImage = '';
           }
           card.classList.toggle('no-hover');
-
+    
           const mainBtn = card.querySelector('.card-main-row .card-button');
           if (mainBtn && mainBtn.textContent.trim() === 'więcej') {
             mainBtn.textContent = 'mniej';
@@ -801,7 +801,6 @@
         });
       });
     });
-    
-  </script>
+    </script>
 </body>
 </html>
