@@ -156,7 +156,7 @@
       --container-max-width: 1187px;
     }
 
-    .card.expanded .card-media {
+    .card-section .card.expanded .card-media {
       background-color: var(--neutral-white); /* Permanent background when expanded */
       background-image: url('https://source.unsplash.com/400x400/?barber,style');
       background-size: cover;
@@ -164,7 +164,7 @@
       box-shadow: inset 0 -5px 10px 1px rgba(0, 0, 0, 0.25);
     }
 
-    .card.expanded:hover .card-media {
+    .card-section .card.expanded:hover .card-media {
       background-color: var(--neutral-white); /* Lock hover effect */
       background-image: url('https://source.unsplash.com/400x400/?barber,style');
       background-size: cover;
@@ -402,13 +402,16 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 10px 26px;
+  padding: 3% 26px;
 }
 
 .card-section .card-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5.2% 26px;
+      height: 17%;
 }
 
 .card-section .card-bottom-extra {
@@ -478,14 +481,6 @@
       transition: height 0.7s ease;
 }
 
-.card-section .card-bottom {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 5.7% 26px;
-      height: 17%;
-}
 
 .card-section .card-title {
       font-size: var(--title-medium);
@@ -518,11 +513,6 @@
       transform: translateY(15px);
       transition: opacity 0.7s ease;
       pointer-events: none;
-    }
-
-    .card-section .card.expanded .card-bottom {
-      height: 26%;
-      padding: 4% 26px;
     }
 
     .card-section .card.expanded .card-extra-row {
